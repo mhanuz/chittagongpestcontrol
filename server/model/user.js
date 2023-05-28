@@ -16,6 +16,8 @@ const userSchema =new mongoose.Schema({
     }
 })
 
+// register our schema with mongoose, and the user model can then be accessed 
+// by mongoose.model('user', userSchema) or Variable User
 const User = mongoose.model('user', userSchema);
 
 export default User;
