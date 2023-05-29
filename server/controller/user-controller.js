@@ -35,6 +35,7 @@ export const loginUser = async (request, response) => {
         if (match) {
             // secter key generator: require('crypto').randomBytes(64).toString('hex');
             // run above code on "node console" 
+            // gernerate tokens
             const accessToken = jwt.sign(user.toJSON(), process.env.ACCESS_SECRET_KEY, {expiresIn:'15m'});
             const refreshToken = jwt.sign(user.toJSON(), process.env.REFRESH_SECRET_KEY);
 
