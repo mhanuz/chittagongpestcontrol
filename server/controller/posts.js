@@ -15,7 +15,7 @@ export const createPost = async(req, res) => {
     const post = req.body;
 
     // validate the data 
-    const newPost = new PostMessage(post)
+    const newPost = new PostMessage({...post, creator:req.userId, createdAt: new Date().toISOString()});
     try {
         await newPost.save(); // save to database
         res.status(201).json(newPost);
