@@ -2,7 +2,7 @@ import express from 'express';
 import { getPostsBySearch, getPosts, getPost, createPost, updatePost,deletePost, likePost,commentPost } from '../controller/posts.js';
 import auth from '../middleware/auth.js';
 
-
+// create router object to handle request
 const router = express.Router();
 router.post('/:id/commentPost',auth, commentPost);
 router.get('/search', getPostsBySearch);
