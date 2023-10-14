@@ -1,8 +1,9 @@
 // dependencies
+// to import modules >> in pacakge.json add "type": "module"
 import express from 'express';
-import bodyParser from 'body-parser';
+import bodyParser from 'body-parser'; // for express middleware, to process data sent in an HTTP request body.
 import mongoose from 'mongoose';
-import cors from 'cors';
+import cors from 'cors'; // cross origin resouce sharing
 import dotenv from 'dotenv';
 
 // components, modules
